@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfTartaly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTartaly"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="540"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid  Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="lbTartalyok" Background="LightPink" Margin="5"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btnDuplaz" Content="Dupla méretre növel" Click="btnDuplaz_Click"/>
+                <Button x:Name="btnLeenged" Content="Kiüríti" Margin="30 0" Click="btnLeenged_Click"/>
+                <TextBox x:Name="txtMennyitTolt" Width="40" Background="LightGreen"/>
+                <Label Content="liter"/>
+                <Button x:Name="btntolt" Content="Töltés" Click="btntolt_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <RadioButton x:Name="rdoTeglatest" GroupName="TestFajta" Content="Téglatest" Checked="rdoTeglatest_Checked"/>
+                <RadioButton x:Name="rdoKocka" GroupName="TestFajta" Content="Kocka" Checked="rdoKocka_Checked" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="A él:"/>
+                <TextBox x:Name="txtAel" Width="80" Background="LightSkyBlue"/>
+                <Label Content="B él:"/>
+                <TextBox x:Name="txtBel" Width="80" Background="LightSkyBlue"/>
+                <Label Content="C él:"/>
+                <TextBox x:Name="txtCel" Width="80" Background="LightSkyBlue"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Content="Test neve:"/>
+                <TextBox x:Name="txtNev" Width="80" Background="LightSkyBlue"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Button x:Name="btnFelvesz" Content="Felvesz a listába" Height="30" Click="btnFelvesz_Click" />
+                <Button x:Name="btnRogzit" Content="Rögzít fájlba" Height="30" Click="btnRogzit_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>
